@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Logs
+react-vite/logs
+react-vite/*.log
+react-vite/npm-debug.log*
+react-vite/yarn-debug.log*
+react-vite/yarn-error.log*
+react-vite/pnpm-debug.log*
+react-vite/lerna-debug.log*
+
+# Logs
+server-ts/logs
+server-ts/*.log
+server-ts/npm-debug.log*
+server-ts/yarn-debug.log*
+server-ts/yarn-error.log*
+server-ts/pnpm-debug.log*
+server-ts/lerna-debug.log*
+
+react-vite/node_modules
+react-vite/dist
+
+server-ts/node_modules
+server-ts/dist
+
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
