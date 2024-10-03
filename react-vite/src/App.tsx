@@ -1,5 +1,7 @@
+import {Root} from './components/Root.tsx'
+
 export const App = () => {
-    return <div>
-        App
-    </div>
+    return <>
+        <Root />
+    </>
 }
