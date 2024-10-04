@@ -1,4 +1,4 @@
-import {RequestWithParams, RequestWithParamsAndReqBody, RequestWithQuery, RequestWithResBody} from '../types/requests'
+import {RequestWithParams, RequestWithParamsAndReqBody, RequestWithQuery, RequestWithReqBody} from '../types/requests'
 import {CreateAndUpdateUserBody, GetUserWithParams, QueryFilterUsers, UserModel} from '../models'
 import express, {Response} from 'express'
 import {HTTP_STATUS_CODE} from '../constants/HTTP_STATUS_CODE'
@@ -26,7 +26,7 @@ export const getUsersRouter = (db: IDatabase) => {
         res.status(HTTP_STATUS_CODE.OK_200).json(user)
 
     })
-    router.post('', (req: RequestWithResBody<CreateAndUpdateUserBody>, res: Response<UserModel>) => {
+    router.post('', (req: RequestWithReqBody<CreateAndUpdateUserBody>, res: Response<UserModel>) => {
         if (!req.body.name) {
             res.sendStatus(HTTP_STATUS_CODE.BAD_REQUEST_400)
             return

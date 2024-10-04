@@ -20,5 +20,10 @@
       "id": 5,
       "name": "Yoda"
     }
-  ]
+  ],
+  "settings": {
+    "firstField": true,
+    "secondField": "String",
+    "thirdField": false
+  }
 }

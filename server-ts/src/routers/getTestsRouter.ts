@@ -6,8 +6,17 @@ export const getTestsRouter = (db: IDatabase) => {
 
     const router = express.Router()
 
-    router.delete('', (_, res: Response) => {
+    router.delete('/users', (_, res: Response) => {
         db.users = []
+        res.sendStatus(HTTP_STATUS_CODE.NO_CONTENT_204)
+    })
+
+    router.delete('/settings',(_, res: Response) => {
+        db.settings = {
+            firstField: true,
+            secondField: '',
+            thirdField: true
+        }
         res.sendStatus(HTTP_STATUS_CODE.NO_CONTENT_204)
     })
 

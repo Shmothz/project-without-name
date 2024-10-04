@@ -7,7 +7,7 @@ const getRequest = () => request(app)
 
 describe('/users', () => {
     beforeAll( async() => {
-        await getRequest().delete('/test')
+        await getRequest().delete('/test/users')
     })
     it('should return 200 all users',  async () => {
         await getRequest()
