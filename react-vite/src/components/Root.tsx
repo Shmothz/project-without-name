@@ -1,15 +1,19 @@
 import {Route, Routes} from 'react-router-dom'
-import {Users} from './Users'
 import {routes} from '../constants/routes.ts'
-import {Header} from './Header'
+import {Home} from './Home'
+import {NotFound} from './NotFound'
+import {lazy, Suspense} from 'react'
+import {Preloader} from './common/Preloader'
 
+const UsersLazy = lazy(() => import('./Users').then(({Users}) => ({default: Users})))
 
 export const Root = () => {
-    return <>
-        <Header/>
-        <Routes>{
-            routes.map((route) => <Route key={route.id} path={route.path} element={<Users/>}/>)
-        }</Routes>
-    </>
+    return <Suspense fallback={<Preloader/>}>
+        <Routes>
+            <Route path={'/'} element={<Home/>}/>
+            <Route id={routes.users.id} path={routes.users.path} element={<UsersLazy/>}/>
+            <Route path={'*'} element={<NotFound/>}/>
+        </Routes>
+    </Suspense>
 
 }
