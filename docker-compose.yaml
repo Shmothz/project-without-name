@@ -1,0 +1,18 @@
+version: "v2.27.1-desktop.1"
+services:
+  server-ts:
+    build: ./server-ts
+    container_name: server-ts
+    ports:
+      - '3000:3000'
+    volumes:
+      - './server-ts:/app'
+      - /app/node_modules
+  react-vite:
+    build: ./react-vite
+    container_name: react-vite
+    ports:
+      - '5173:5173'
+    volumes:
+      - './react-vite:/app'
+      - /app/node_modules
