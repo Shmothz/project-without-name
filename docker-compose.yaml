@@ -6,7 +6,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - './server-ts:/app'
+      - ./server-ts:/app
       - /app/node_modules
   react-vite:
     build: ./react-vite
@@ -14,5 +14,5 @@ services:
     ports:
       - '5173:5173'
     volumes:
-      - './react-vite:/app'
+      - ./react-vite:/app
       - /app/node_modules
