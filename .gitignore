@@ -29,6 +29,7 @@ react-vite/node_modules
 react-vite/dist
 
 server-ts/node_modules
+server-ts/dist
 
 dist-ssr
 *.local
