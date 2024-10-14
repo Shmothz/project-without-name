@@ -1,13 +1,15 @@
-FROM node:alpine
+FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json ./
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+EXPOSE 3000
 
-CMD ["node","./dist/index.js"]
+RUN npm run build
+
+CMD ["node","dist/index.js"]
