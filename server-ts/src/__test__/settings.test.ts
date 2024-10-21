@@ -28,7 +28,7 @@ describe('/settings', () => {
         await getRequest()
             .put('/settings')
             .send(newSettingsData)
-            .expect(HTTP_STATUS_CODE.NO_CONTENT_204)
+            .expect(HTTP_STATUS_CODE.OK_200)
         const changedResponse = await getRequest()
             .get('/settings')
             .expect(HTTP_STATUS_CODE.OK_200)
