@@ -1,0 +1,21 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - 96px);
+  padding: 48px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 200px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: grab;
+}
